@@ -4,12 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GSDS - Importação, Exportação e Distribuição</title>
-
-  <meta name="description" content="GSDS - Referência global em distribuição de alimentos e bebidas, conectando produtores e consumidores com excelência e qualidade.">
-  <meta name="keywords" content="GSDS, importação, exportação, distribuição, alimentos, bebidas, Shark, Brazilian Delight, Tem mais açaí, Lully Pet">
-  <meta name="author" content="GSDS">
-  <meta name="robots" content="index, follow">
-
+  <meta name="description" content="GSDS - Referência global em distribuição de alimentos e bebidas.">
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -24,28 +19,34 @@
   </div>
 
   <nav class="navbar" id="mainNav"> 
-    <div class="nav-content">
+    <div class="container nav-content">
+      <a class="nav-brand" href="index.html">
+        <h2 class="main-logo" style="display:flex; align-items:center;">GSDS</h2>
+      </a>
+
       <button class="menu-toggle" aria-label="Abrir menu" type="button" onclick="toggleMenu()">
         <i class="fas fa-bars"></i>
       </button>
 
-      <a class="nav-logo-mobile" href="index.html" aria-label="Ir para Home" style="color: #fff; font-weight: 900; text-decoration: none; font-size: 1.5rem;">
-        GSDS
-      </a>
-
       <ul class="nav-menu" id="navMenu">
-        <li><a href="#inicio" onclick="closeMenu()">INÍCIO</a></li>
-        <li><a href="institucional.html" onclick="closeMenu()">SOBRE A EMPRESA</a></li>
-        <li><a href="marcas.html" onclick="closeMenu()">NOSSAS MARCAS</a></li>
-
-        <li class="nav-logo-item">
-          <h2 style="color: #fff; margin: 0 20px; font-weight: 900; letter-spacing: 2px; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">GSDS</h2>
-        </li>
-
-        <li><a href="#diferenciais" onclick="closeMenu()">DIFERENCIAIS</a></li>
-        <li><a href="institucional.html" onclick="closeMenu()">COMPLIANCE</a></li>
-        <li><a href="#fale-conosco" onclick="closeMenu()">CONTATO</a></li>
+        <div class="lang-switcher mobile-only" style="margin-bottom: 20px;">
+          <button class="lang-btn active" data-lang="pt" onclick="setLanguage('pt')">PT</button><span class="lang-divider">|</span>
+          <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button><span class="lang-divider">|</span>
+          <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+        </div>
+        <li><a href="#inicio" onclick="closeMenu()" data-i18n="nav_home">INÍCIO</a></li>
+        <li><a href="institucional.html" onclick="closeMenu()" data-i18n="nav_about">SOBRE A EMPRESA</a></li>
+        <li><a href="marcas.html" onclick="closeMenu()" data-i18n="nav_brands">NOSSAS MARCAS</a></li>
+        <li><a href="#diferenciais" onclick="closeMenu()" data-i18n="nav_diff">DIFERENCIAIS</a></li>
+        <li><a href="institucional.html" onclick="closeMenu()" data-i18n="nav_compliance">COMPLIANCE</a></li>
+        <li><a href="#fale-conosco" onclick="closeMenu()" data-i18n="nav_contact">CONTATO</a></li>
       </ul>
+
+      <div class="lang-switcher hide-mobile">
+        <button class="lang-btn active" data-lang="pt" onclick="setLanguage('pt')">PT</button><span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button><span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+      </div>
     </div>
   </nav>
 
@@ -54,36 +55,30 @@
       <div class="video-overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%);"></div>
       <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=2070&auto=format&fit=crop" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;" alt="Logística Global">
     </div>
-
     <div class="hero-content">
       <h1 class="main-brand-text">GSDS</h1>
-      <h2 class="dynamic-subtitle" style="margin-bottom: 30px;">CONECTANDO PRODUTORES E CONSUMIDORES GLOBAIS.</h2>
-      
+      <h2 class="dynamic-subtitle" style="margin-bottom: 30px;" data-i18n="hero_subtitle">CONECTANDO PRODUTORES E CONSUMIDORES GLOBAIS.</h2>
       <div class="editorial-actions" style="justify-content: center; gap: 20px;">
-        <a href="#marcas" class="btn-corporate-solid" style="background: var(--primary); color: #fff; border: none;">VER PORTFÓLIO</a>
-        <a href="#fale-conosco" class="btn-corporate-outline" style="color: #fff; border-color: rgba(255,255,255,0.5);">FALAR COM ESPECIALISTA</a>
+        <a href="#marcas" class="btn-corporate-solid" data-i18n="btn_portfolio">VER PORTFÓLIO</a>
+        <a href="#fale-conosco" class="btn-corporate-outline" data-i18n="btn_specialist">FALAR COM ESPECIALISTA</a>
       </div>
     </div>
-
-    <div class="scroll-indicator"><i class="fas fa-chevron-down"></i></div>
   </header>
 
   <section class="institucional-section" id="grupo" style="padding: 80px 0; background: var(--bg-light-gray);">
     <div class="container">
-      <div class="gsds-history-container fade-up">
-        
+      <div class="gsds-history-container">
         <div class="gsds-history-text">
-          <span class="identity-label">QUEM SOMOS</span>
-          <h2 class="identity-title" style="font-size: 2.8rem; margin-bottom: 25px;">ESTRUTURANDO O <br><span class="text-highlight">MERCADO GLOBAL</span></h2>
-          <p>
-            A GSDS nasceu com a missão de transformar a operação logística internacional, superando o papel tradicional de intermediária para atuar como uma parceira estratégica na cadeia de abastecimento.
+          <span class="identity-label" data-i18n="section_area">ÁREA DE ATUAÇÃO</span>
+          <h2 class="identity-title" style="font-size: 2.8rem; margin-bottom: 25px;" data-i18n="area_title">ESTRUTURANDO O <br><span class="text-highlight">MERCADO GLOBAL</span></h2>
+          <p data-i18n="area_p1">
+            Com atuação nacional e internacional, a GSDS possui presença ativa na distribuição e comercialização de alimentos, bebidas e marcas próprias em diversos mercados.
           </p>
-          <p>
-            Garantimos que marcas de alimentos e bebidas de alto padrão cheguem com agilidade, segurança e integridade a diversos continentes. Desenvolvemos soluções personalizadas que protegem a qualidade do produtor e atendem rigorosamente às exigências do consumidor final.
+          <p data-i18n="area_p2">
+            Garantimos que as marcas cheguem com agilidade, segurança e integridade. Desenvolvemos soluções personalizadas que protegem a qualidade do produtor e atendem rigorosamente às exigências do consumidor final.
           </p>
-          
           <div class="editorial-actions" style="justify-content: flex-start; margin-top: 30px;">
-            <a href="institucional.html" class="btn-outline-dark">CONHEÇA NOSSA HISTÓRIA COMPLETA</a>
+            <a href="institucional.html" class="btn-outline-dark" data-i18n="btn_history">CONHEÇA NOSSA HISTÓRIA COMPLETA</a>
           </div>
         </div>
         
@@ -92,11 +87,27 @@
             <img src="https://images.unsplash.com/photo-1586528116311-ad8ed7c80a0f?q=80&w=2070&auto=format&fit=crop" alt="Logística e Distribuição GSDS">
           </div>
           <div class="gsds-year-badge">
-            <h3>+5</h3>
-            <span>Continentes<br>Atendidos</span>
+            <h3 class="counter-anim" data-target="5" data-plus>0</h3>
+            <span data-i18n="badge_continents">Continentes<br>Atendidos</span>
           </div>
         </div>
+      </div>
 
+      <div class="gsds-mv-container" style="margin-top: 80px; margin-bottom: 20px;">
+        <div class="gsds-mv-card mission-card">
+          <i class="fas fa-bullseye"></i>
+          <h3 data-i18n="mission_title">NOSSA MISSÃO</h3>
+          <p data-i18n="mission_desc">
+            Proporcionar produtos alimentares e bebidas de alta qualidade, conectando produtores e consumidores através de uma distribuição eficiente, ética e inovadora. Buscamos fortalecer a cadeia de abastecimento garantindo confiança, diversidade e satisfação em todos os níveis de serviços.
+          </p>
+        </div>
+        <div class="gsds-mv-card vision-card">
+          <i class="fas fa-eye"></i>
+          <h3 data-i18n="vision_title">NOSSA VISÃO</h3>
+          <p data-i18n="vision_desc">
+            Ser reconhecida como referência global em distribuição de alimentos e bebidas, destacando-se pela excelência operacional, sustentabilidade e compromisso com o crescimento dos nossos parceiros e mercados. Aspiramos ser uma empresa que transforma a forma como produtos alimentares são distribuídos entre continentes.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -104,33 +115,31 @@
   <section class="gsds-values-section" id="diferenciais" style="padding: 100px 0; background: #ffffff;">
     <div class="container">
       <div style="text-align: center; margin-bottom: 60px;">
-        <span class="identity-label" style="margin: 0 auto 20px auto;">POR QUE ESCOLHER A GSDS</span>
-        <h2 class="identity-title">NOSSOS <span class="text-highlight">DIFERENCIAIS</span></h2>
+        <span class="identity-label" style="margin: 0 auto 20px auto;" data-i18n="diff_label">POR QUE ESCOLHER A GSDS</span>
+        <h2 class="identity-title" data-i18n="diff_title">NOSSOS <span class="text-highlight">DIFERENCIAIS</span></h2>
       </div>
 
-      <div class="gsds-values-grid fade-up">
+      <div class="gsds-values-grid">
         <div class="gsds-value-item">
           <div class="gsds-value-header">
             <i class="fas fa-shield-alt"></i>
-            <h4>Compliance e Ética</h4>
+            <h4 data-i18n="diff_1_title">Compliance e Ética</h4>
           </div>
-          <p>Operações pautadas em rigorosos processos de conformidade internacional, garantindo segurança jurídica e comercial.</p>
+          <p data-i18n="diff_1_desc">Operações pautadas em rigorosos processos de conformidade internacional, garantindo segurança jurídica e comercial.</p>
         </div>
-        
         <div class="gsds-value-item">
           <div class="gsds-value-header">
             <i class="fas fa-boxes"></i>
-            <h4>Logística Ágil</h4>
+            <h4 data-i18n="diff_2_title">Logística Ágil</h4>
           </div>
-          <p>Gestão de cadeia de suprimentos otimizada para reduzir tempo de trânsito e preservar a qualidade dos produtos.</p>
+          <p data-i18n="diff_2_desc">Gestão de cadeia de suprimentos otimizada para reduzir tempo de trânsito e preservar a qualidade dos produtos.</p>
         </div>
-
         <div class="gsds-value-item">
           <div class="gsds-value-header">
             <i class="fas fa-globe-americas"></i>
-            <h4>Alcance Global</h4>
+            <h4 data-i18n="diff_3_title">Alcance Global</h4>
           </div>
-          <p>Rede de distribuição estruturada para conectar parceiros produtores aos principais polos de consumo mundiais.</p>
+          <p data-i18n="diff_3_desc">Rede de distribuição estruturada para conectar parceiros produtores aos principais polos de consumo mundiais.</p>
         </div>
       </div>
     </div>
@@ -138,22 +147,20 @@
 
   <section class="lancamentos-section" id="marcas" style="padding-top: 60px; background: var(--bg-light-gray);">
     <div class="container">
-      
       <div class="corporate-header-wrapper flex-header">
         <div>
-          <span class="identity-label">PORTFÓLIO ESTRATÉGICO</span>
-          <h2 class="identity-title">MARCAS <span class="text-highlight">PRÓPRIAS</span></h2>
+          <span class="identity-label" data-i18n="brands_badge">PORTFÓLIO ESTRATÉGICO</span>
+          <h2 class="identity-title" data-i18n="brands_title">MARCAS <span class="text-highlight">PRÓPRIAS</span></h2>
         </div>
         <a href="marcas.html" class="ver-todos-modern">
           VER CATÁLOGO TÉCNICO <i class="fas fa-arrow-right"></i>
         </a>
       </div>
 
-      <div class="releases-cards-grid fade-up">
-        
+      <div class="releases-cards-grid">
         <div class="release-card" onclick="window.location.href='marcas.html'">
           <div class="release-img-wrap">
-            <img src="assets/produtos/shark.png" alt="Lata de Energético Shark">
+            <div style="width: 100%; height: 100%; background: #004085; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">SHARK</div>
             <div class="release-overlay"><i class="fas fa-search-plus"></i></div>
           </div>
           <div class="release-info">
@@ -161,10 +168,9 @@
             <p>Bebidas Energéticas Premium</p>
           </div>
         </div>
-        
         <div class="release-card" onclick="window.location.href='marcas.html'">
           <div class="release-img-wrap">
-            <img src="assets/produtos/braziliandelight.png" alt="Lata de Energético Shark">
+            <div style="width: 100%; height: 100%; background: #0056b3; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: bold; text-align: center;">BRAZILIAN<br>DELIGHT</div>
             <div class="release-overlay"><i class="fas fa-search-plus"></i></div>
           </div>
           <div class="release-info">
@@ -172,7 +178,6 @@
             <p>4 Sabores Tropicais</p>
           </div>
         </div>
-
         <div class="release-card" onclick="window.location.href='marcas.html'">
           <div class="release-img-wrap">
             <div style="width: 100%; height: 100%; background: #002244; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; font-weight: bold; text-align: center; border-bottom: 4px solid var(--primary);">TEM MAIS<br>AÇAÍ</div>
@@ -183,7 +188,6 @@
             <p>Produtos Naturais</p>
           </div>
         </div>
-
         <div class="release-card" onclick="window.location.href='marcas.html'">
           <div class="release-img-wrap">
             <div style="width: 100%; height: 100%; background: #003366; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold; border-bottom: 4px solid var(--primary);">LULLY PET</div>
@@ -200,8 +204,7 @@
 
   <section class="contact-form-section" id="fale-conosco" style="background: #ffffff;">
     <div class="container">
-      
-      <div class="corporate-header-wrapper fade-up" style="text-align: center;">
+      <div class="corporate-header-wrapper" style="text-align: center;">
         <span class="identity-label">ATENDIMENTO CORPORATIVO</span>
         <h2 class="identity-title">FALE COM A <span class="text-highlight">GSDS</span></h2>
         <p style="color: #666; font-weight: 500; margin-top: -20px; margin-bottom: 40px;">
@@ -209,9 +212,8 @@
         </p>
       </div>
 
-      <div class="contact-form-wrapper hover-float fade-up">
-        <form id="gsdsForm" action="mailto:contato@gsds.pt" method="POST" enctype="text/plain" class="lovefunk-form">
-          
+      <div class="contact-form-wrapper">
+        <form id="gsdsForm" action="mailto:contato@gsds.pt" method="POST" enctype="text/plain" class="gsds-form">
           <div class="form-row">
             <div class="form-group">
               <label for="nome">Nome / Empresa</label>
@@ -222,7 +224,6 @@
               <input type="email" id="email" name="email" class="form-control" placeholder="contato@suaempresa.com" required>
             </div>
           </div>
-
           <div class="form-row">
             <div class="form-group">
               <label for="telefone">Telefone / WhatsApp</label>
@@ -239,56 +240,48 @@
               </select>
             </div>
           </div>
-
           <div class="form-group">
             <label for="mensagem">Mensagem Detalhada</label>
             <textarea id="mensagem" name="mensagem" class="form-control" placeholder="Como a GSDS pode otimizar os seus negócios hoje?" required></textarea>
           </div>
-
           <div class="form-submit-wrapper">
-            <button type="submit" class="btn-primary-solid btn-submit-form">
+            <button type="submit" class="btn-submit-form">
               ENVIAR SOLICITAÇÃO <i class="fas fa-paper-plane"></i>
             </button>
           </div>
-
         </form>
       </div>
-
     </div>
   </section>
 
   <footer class="footer-section" id="contato">
     <div class="container">
-      
       <div class="footer-cta-box">
-        <h2>FORTALEÇA SUA CADEIA DE ABASTECIMENTO</h2>
-        <p>Soluções completas em importação, exportação e distribuição global.</p>
-        <a href="mailto:contato@gsds.pt" class="btn-footer-red">FALAR COM UM ESPECIALISTA</a>
+        <h2 data-i18n="footer_cta_title">FORTALEÇA SUA CADEIA DE ABASTECIMENTO</h2>
+        <p data-i18n="footer_cta_desc">Soluções completas em importação, exportação e distribuição global.</p>
+        <a href="mailto:contato@gsds.pt" class="btn-footer-red" data-i18n="btn_specialist">FALAR COM UM ESPECIALISTA</a>
       </div>
 
       <div class="footer-main-grid">
-        
         <div class="footer-col brand-col">
           <h2 style="color: #fff; margin-bottom: 20px; font-weight: 900; letter-spacing: 2px;">GSDS</h2>
-          <p>Importação, Exportação e Distribuição de Alimentos e Bebidas, Unipessoal Lda. NIF: 518 626 075.</p>
+          <p>GSDS – Importação, Exportação e Distribuição de Alimentos e Bebidas, Unipessoal Lda. NIF: 518 626 075.</p>
           <div class="footer-socials">
             <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
-
         <div class="footer-col links-col">
-          <h4>NAVEGAÇÃO</h4>
+          <h4 data-i18n="nav_title">NAVEGAÇÃO</h4>
           <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="institucional.html">Sobre a Empresa</a></li>
-            <li><a href="marcas.html">Portfólio de Marcas</a></li>
-            <li><a href="#fale-conosco">Fale Conosco</a></li>
+            <li><a href="#inicio" data-i18n="nav_home">Início</a></li>
+            <li><a href="institucional.html" data-i18n="nav_about">Sobre a Empresa</a></li>
+            <li><a href="marcas.html" data-i18n="nav_brands">Portfólio de Marcas</a></li>
+            <li><a href="#fale-conosco" data-i18n="nav_contact">Fale Conosco</a></li>
           </ul>
         </div>
-
         <div class="footer-col contact-col">
-          <h4>SEDE OPERACIONAL</h4>
+          <h4 data-i18n="hq_title">SEDE OPERACIONAL</h4>
           <div class="contact-item">
             <i class="fas fa-envelope"></i>
             <span>contato@gsds.pt</span>
@@ -298,13 +291,11 @@
             <span>Rua 11 de Maio, nº 14, r/c<br>2670-458 Loures, Lisboa, Portugal</span>
           </div>
         </div>
-
       </div>
     </div>
-
     <div class="footer-bottom">
       <div class="container fb-flex">
-        <p>© 2026 GSDS UNIPESSOAL LDA. TODOS OS DIREITOS RESERVADOS.</p>
+        <p data-i18n="rights">© 2026 GSDS UNIPESSOAL LDA. TODOS OS DIREITOS RESERVADOS.</p>
         <div class="legal-links">
           <a href="#">POLÍTICA DE PRIVACIDADE</a>
           <a href="#">TERMOS DE USO</a>
@@ -313,6 +304,7 @@
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
