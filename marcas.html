@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nossas Marcas - GSDS</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="page-artistas"> <div id="preloader">
+    <div class="loader-content">
+      <h2 style="color: #fff; letter-spacing: 5px;">GSDS</h2>
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <nav class="navbar nav-active" id="mainNav">
+    <div class="nav-content">
+      <button class="menu-toggle" aria-label="Abrir menu" type="button" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <a class="nav-logo-mobile" href="index.html" aria-label="Ir para Home" style="color: #fff; font-weight: 900; text-decoration: none; font-size: 1.5rem;">
+        GSDS
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" onclick="closeMenu()">INÍCIO</a></li>
+        <li><a href="institucional.html" onclick="closeMenu()">SOBRE A EMPRESA</a></li>
+        <li><a href="marcas.html" onclick="closeMenu()" style="color: var(--primary);">NOSSAS MARCAS</a></li>
+
+        <li class="nav-logo-item">
+          <h2 style="color: #fff; margin: 0 20px; font-weight: 900; letter-spacing: 2px;">GSDS</h2>
+        </li>
+
+        <li><a href="index.html#diferenciais" onclick="closeMenu()">DIFERENCIAIS</a></li>
+        <li><a href="index.html#grupo" onclick="closeMenu()">ATUAÇÃO</a></li>
+        <li><a href="index.html#contato" onclick="closeMenu()">CONTATO</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="artists-hero">
+    <div class="container artists-hero-content">
+      <span class="corporate-badge"><i class="fas fa-box-open"></i> PORTFÓLIO EXCLUSIVO</span>
+      <h1 class="corporate-title">AS NOSSAS <span class="text-highlight">MARCAS PRÓPRIAS</span></h1>
+      <p class="corporate-subtitle">
+        Desenvolvemos marcas que fortalecem a nossa identidade no mercado, promovendo produtos que refletem valor, confiança e autenticidade.
+      </p>
+    </div>
+  </header>
+
+  <section class="artists-grid-section">
+    <div class="container">
+      <div class="artists-grid">
+        
+        <div class="artist-flip-card">
+          <div class="artist-card-inner">
+            <div class="artist-card-front">
+              <div style="width: 100%; height: 100%; background: #004085; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">SHARK</div>
+              <div class="artist-front-overlay">
+                <h3 class="artist-name">SHARK</h3>
+                <span class="artist-category">Bebidas • GSDS</span>
+                <div class="btn-ver-perfil">[Ver Detalhes] <i class="fas fa-chevron-right"></i></div>
+              </div>
+            </div>
+            <div class="artist-card-back">
+              <h3>SHARK</h3>
+              <div class="back-links">
+                <a href="javascript:void(0)" class="info-btn" onclick="openArtistModal('SHARK', 'Bebidas Energéticas', '', 'Linha premium de bebidas energéticas focada em alta performance e sabor autêntico. Ideal para os mercados mais exigentes.', 'Catálogo Completo', '#', 'Global', 'Ativo', 'Alta Demanda')"><i class="fas fa-info-circle"></i> Mais Informações</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="artist-flip-card">
+          <div class="artist-card-inner">
+            <div class="artist-card-front">
+              <div style="width: 100%; height: 100%; background: #0056b3; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: bold; text-align: center; padding: 20px;">BRAZILIAN<br>DELIGHT</div>
+              <div class="artist-front-overlay">
+                <h3 class="artist-name">BRAZILIAN DELIGHT</h3>
+                <span class="artist-category">Alimentos • GSDS</span>
+                <div class="btn-ver-perfil">[Ver Detalhes] <i class="fas fa-chevron-right"></i></div>
+              </div>
+            </div>
+            <div class="artist-card-back">
+              <h3>BRAZILIAN DELIGHT</h3>
+              <div class="back-links">
+                <a href="javascript:void(0)" class="info-btn" onclick="openArtistModal('BRAZILIAN DELIGHT', 'Alimentos Premium', '', 'Trazendo o melhor do sabor brasileiro para o mundo. Produtos selecionados com altíssimo padrão de qualidade para exportação.', 'Catálogo Completo', '#', 'Exportação', 'Ativo', 'Premium')"><i class="fas fa-info-circle"></i> Mais Informações</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="artist-flip-card">
+          <div class="artist-card-inner">
+            <div class="artist-card-front">
+              <div style="width: 100%; height: 100%; background: #002244; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: bold; text-align: center; padding: 20px;">TEM MAIS<br>AÇAÍ</div>
+              <div class="artist-front-overlay">
+                <h3 class="artist-name">TEM MAIS AÇAÍ</h3>
+                <span class="artist-category">Naturais • GSDS</span>
+                <div class="btn-ver-perfil">[Ver Detalhes] <i class="fas fa-chevron-right"></i></div>
+              </div>
+            </div>
+            <div class="artist-card-back">
+              <h3>TEM MAIS AÇAÍ</h3>
+              <div class="back-links">
+                <a href="javascript:void(0)" class="info-btn" onclick="openArtistModal('TEM MAIS AÇAÍ', 'Produtos Naturais', '', 'Açaí puro e nutritivo, processado com alta tecnologia para manter o sabor e os nutrientes originais da Amazônia para a Europa e o mundo.', 'Catálogo Completo', '#', 'Exportação', 'Ativo', 'Natural')"><i class="fas fa-info-circle"></i> Mais Informações</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="artist-flip-card">
+          <div class="artist-card-inner">
+            <div class="artist-card-front">
+              <div style="width: 100%; height: 100%; background: #003366; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold; text-align: center;">LULLY PET</div>
+              <div class="artist-front-overlay">
+                <h3 class="artist-name">LULLY PET</h3>
+                <span class="artist-category">Nutrição Animal • GSDS</span>
+                <div class="btn-ver-perfil">[Ver Detalhes] <i class="fas fa-chevron-right"></i></div>
+              </div>
+            </div>
+            <div class="artist-card-back">
+              <h3>LULLY PET</h3>
+              <div class="back-links">
+                <a href="javascript:void(0)" class="info-btn" onclick="openArtistModal('LULLY PET', 'Nutrição Animal', '', 'Linha completa e balanceada de alimentos para pets. Desenvolvida com ingredientes selecionados para garantir saúde e bem-estar animal.', 'Catálogo Completo', '#', 'Global', 'Ativo', 'Crescimento')"><i class="fas fa-info-circle"></i> Mais Informações</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 60px;">
+        <a href="index.html#fale-conosco" class="btn-corporate-solid">SOLICITAR CATÁLOGO DE PRODUTOS</a>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="artist-info-modal" class="modal-overlay" aria-hidden="true">
+    <div class="artist-modal-container">
+      <button class="close-artist-modal" type="button" onclick="closeArtistModal()"><i class="fas fa-times"></i></button>
+      
+      <div class="artist-modal-layout">
+        
+        <div class="artist-modal-img" style="display: flex; align-items: center; justify-content: center; background: #f4f4f4;">
+          <i class="fas fa-box-open" style="font-size: 8rem; color: #ccc;"></i>
+        </div>
+        
+        <div class="artist-modal-info">
+          <span id="info-modal-cat" class="artist-category-badge">CATEGORIA</span>
+          <h2 id="info-modal-name">NOME DA MARCA</h2>
+          
+          <div class="artist-stats-row">
+            <div class="stat-box">
+              <strong id="info-modal-insta">--</strong>
+              <span>Mercado</span>
+            </div>
+            <div class="stat-box">
+              <strong id="info-modal-yt">--</strong>
+              <span>Status</span>
+            </div>
+            <div class="stat-box">
+              <strong id="info-modal-spotify">--</strong>
+              <span>Demanda</span>
+            </div>
+          </div>
+
+          <h4 class="modal-section-title"><i class="fas fa-info-circle"></i> Sobre o Produto</h4>
+          <p id="info-modal-bio" class="artist-modal-bio"></p>
+
+          <div class="artist-modal-actions" style="margin-top: 40px;">
+            <a href="mailto:contato@gsds.pt" class="btn-modal-primary" onclick="closeArtistModal()"><i class="fas fa-envelope"></i> SOLICITAR ORÇAMENTO</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-section" id="contato">
+     </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

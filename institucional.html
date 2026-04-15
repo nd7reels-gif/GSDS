@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Nós - GSDS</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="page-institucional">
+
+  <div id="preloader">
+    <div class="loader-content">
+      <h2 style="color: #fff; letter-spacing: 5px;">GSDS</h2>
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <nav class="navbar nav-active" id="mainNav">
+    <div class="nav-content">
+      <button class="menu-toggle" aria-label="Abrir menu" type="button" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <a class="nav-logo-mobile" href="index.html" aria-label="Ir para Home" style="color: #fff; font-weight: 900; text-decoration: none; font-size: 1.5rem;">
+        GSDS
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" onclick="closeMenu()">INÍCIO</a></li>
+        <li><a href="institucional.html" onclick="closeMenu()" style="color: var(--primary);">SOBRE A EMPRESA</a></li>
+        <li><a href="marcas.html" onclick="closeMenu()">NOSSAS MARCAS</a></li>
+
+        <li class="nav-logo-item">
+          <h2 style="color: #fff; margin: 0 20px; font-weight: 900; letter-spacing: 2px;">GSDS</h2>
+        </li>
+
+        <li><a href="index.html#diferenciais" onclick="closeMenu()">DIFERENCIAIS</a></li>
+        <li><a href="index.html#grupo" onclick="closeMenu()">ATUAÇÃO</a></li>
+        <li><a href="index.html#contato" onclick="closeMenu()">CONTATO</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="corporate-hero">
+    <div class="container corporate-hero-content">
+      <span class="corporate-badge"><i class="fas fa-globe"></i> ATUAÇÃO GLOBAL</span>
+      <h1 class="corporate-title">TRADIÇÃO E <span class="text-highlight">INOVAÇÃO</span></h1>
+      <p class="corporate-subtitle">
+        Conheça a história e os princípios que guiam a GSDS na distribuição internacional de excelência.
+      </p>
+    </div>
+  </header>
+
+  <section class="institucional-section" style="background: var(--bg-light-gray);">
+    <div class="container">
+
+      <div class="gsds-history-container fade-up">
+        <div class="gsds-history-text">
+          <span class="identity-label">A NOSSA HISTÓRIA</span>
+          <h2 class="identity-title" style="font-size: 2.8rem; margin-bottom: 25px;">CONECTANDO <br><span class="text-highlight">CONTINENTES</span></h2>
+          <p>
+            A GSDS – Importação, Exportação e Distribuição de Alimentos e Bebidas, Unipessoal Lda foi oficialmente fundada em 27 de fevereiro de 2026, na cidade de Loures, Lisboa (Portugal). Nascemos com o propósito claro de atuar como uma ponte estratégica e eficiente entre produtores de altíssimo padrão e os mais diversos canais de consumo no mercado nacional e internacional.
+          </p>
+          <p>
+            Criada por especialistas com vasta vivência em comércio exterior e logística avançada, a GSDS combina um modelo de distribuição ágil com um rigor absoluto pela qualidade dos produtos. Investimos em parcerias duradouras que garantem diversidade de portfólio e a satisfação contínua da nossa rede de clientes.
+          </p>
+          <p>
+            Além da distribuição, a GSDS desenvolve marcas próprias exclusivas. Essa verticalização fortalece a nossa identidade no mercado global e nos permite oferecer produtos que refletem valor real, confiança e autenticidade.
+          </p>
+        </div>
+        
+        <div class="gsds-history-image-wrap">
+          <div class="gsds-history-image">
+            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop" alt="Logística Global GSDS">
+          </div>
+          <div class="gsds-year-badge">
+            <h3>2026</h3>
+            <span>Fundação</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gsds-mv-container fade-up" style="transition-delay: 0.2s;">
+        <div class="gsds-mv-card mission-card hover-float">
+          <i class="fas fa-bullseye"></i>
+          <h3>NOSSA MISSÃO</h3>
+          <p>
+            Proporcionar produtos alimentares e bebidas de alta qualidade, conectando produtores e consumidores através de uma distribuição eficiente, ética e inovadora. Buscamos fortalecer a cadeia de abastecimento garantindo confiança, diversidade e satisfação em todos os níveis operacionais.
+          </p>
+        </div>
+        
+        <div class="gsds-mv-card vision-card hover-float">
+          <i class="fas fa-eye"></i>
+          <h3>NOSSA VISÃO</h3>
+          <p>
+            Ser reconhecida como referência global em distribuição de alimentos e bebidas, destacando-se pela excelência operacional, sustentabilidade e compromisso com o crescimento de parceiros. Aspiramos transformar a forma como produtos circulam globalmente.
+          </p>
+        </div>
+      </div>
+
+      <div class="gsds-values-section fade-up" style="transition-delay: 0.4s; padding-bottom: 80px;">
+        <div style="text-align: center; margin-bottom: 50px;">
+          <span class="identity-label" style="margin: 0 auto 20px auto;">NOSSOS PRINCÍPIOS</span>
+          <h2 class="identity-title">VALORES <span class="text-highlight">GSDS</span></h2>
+        </div>
+
+        <div class="gsds-values-grid">
+          <div class="gsds-value-item">
+            <div class="gsds-value-header">
+              <i class="fas fa-handshake"></i>
+              <h4>Integridade</h4>
+            </div>
+            <p>Atuamos com total transparência e ética em todas as nossas relações comerciais e logísticas.</p>
+          </div>
+          
+          <div class="gsds-value-item">
+            <div class="gsds-value-header">
+              <i class="fas fa-award"></i>
+              <h4>Qualidade</h4>
+            </div>
+            <p>Buscamos incessantemente os melhores produtos e serviços para superar as expectativas dos clientes.</p>
+          </div>
+
+          <div class="gsds-value-item">
+            <div class="gsds-value-header">
+              <i class="fas fa-clock"></i>
+              <h4>Compromisso</h4>
+            </div>
+            <p>Cumprimos rigorosamente os prazos acordados, mantendo um elo inquebrável de confiança com parceiros.</p>
+          </div>
+
+          <div class="gsds-value-item">
+            <div class="gsds-value-header">
+              <i class="fas fa-lightbulb"></i>
+              <h4>Inovação</h4>
+            </div>
+            <p>Incentivamos soluções operacionais e criativas que agregam valor direto ao negócio e ao processo logístico.</p>
+          </div>
+
+          <div class="gsds-value-item">
+            <div class="gsds-value-header">
+              <i class="fas fa-leaf"></i>
+              <h4>Sustentabilidade</h4>
+            </div>
+            <p>Promovemos e priorizamos práticas comerciais responsáveis com o meio ambiente e com a sociedade.</p>
+          </div>
+
+          <div class="gsds-value-item">
+            <div class="gsds-value-header">
+              <i class="fas fa-users"></i>
+              <h4>Respeito</h4>
+            </div>
+            <p>Valorizamos pessoas, culturas e respeitamos as particularidades de todos os mercados em que operamos.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer-section" id="contato">
+    <div class="container">
+      
+      <div class="footer-cta-box">
+        <h2>FORTALEÇA SUA CADEIA DE ABASTECIMENTO</h2>
+        <p>Soluções em importação, exportação e distribuição global de alimentos e bebidas.</p>
+        <a href="mailto:contato@gsds.pt" class="btn-footer-red">FALAR COM UM ESPECIALISTA</a>
+      </div>
+
+      <div class="footer-main-grid">
+        
+        <div class="footer-col brand-col">
+          <h2 style="color: #fff; margin-bottom: 20px; font-weight: 900; letter-spacing: 2px;">GSDS</h2>
+          <p>Importação, Exportação e Distribuição de Alimentos e Bebidas, Unipessoal Lda. NIF: 518 626 075.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col links-col">
+          <h4>NAVEGAÇÃO</h4>
+          <ul>
+            <li><a href="index.html#inicio">Início</a></li>
+            <li><a href="institucional.html">Sobre a Empresa</a></li>
+            <li><a href="marcas.html">Nossas Marcas</a></li>
+            <li><a href="index.html#fale-conosco">Fale Conosco</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col contact-col">
+          <h4>SEDE OPERACIONAL</h4>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>contato@gsds.pt</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Rua 11 de Maio, nº 14, r/c<br>2670-458 Loures, Lisboa, Portugal</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container fb-flex">
+        <p>© 2026 GSDS UNIPESSOAL LDA. TODOS OS DIREITOS RESERVADOS.</p>
+        <div class="legal-links">
+          <a href="#">POLÍTICA DE PRIVACIDADE</a>
+          <a href="#">TERMOS DE USO</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
