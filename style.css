@@ -45,14 +45,45 @@ body { background: #ffffff; color: var(--text-on-white); }
 @media (min-width: 769px) { .hide-mobile { display: flex; } .mobile-only { display: none !important; } }
 
 /* ==========================================
-   NAVBAR
+   NAVBAR (ALINHADA E DINÂMICA)
 ========================================== */
-.navbar { display: flex; justify-content: center; align-items: center; padding: 18px 0; background: transparent; position: fixed; width: 100%; z-index: 1000; transition: background 0.4s ease, padding 0.4s ease; }
-.navbar.nav-active { background: rgba(0, 0, 0, 0.95); padding: 10px 0; border-bottom: 1px solid rgba(0, 86, 179, 0.2); }
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0; /* Espaçamento menor no topo */
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: background 0.4s ease, padding 0.4s ease;
+}
+
+.navbar.nav-active {
+  background: rgba(0, 0, 0, 0.95);
+  padding: 5px 0; /* BARRA BEM MAIS FINA AO ROLAR */
+  border-bottom: 1px solid rgba(0, 86, 179, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
 .nav-content { display: flex; align-items: center; justify-content: space-between; width: 100%; }
 .nav-brand { text-decoration: none; display: flex; align-items: center; }
 .nav-brand h2 { color: #fff; font-weight: 900; letter-spacing: 2px; font-size: 2rem; margin: 0; }
-.main-logo { height: 190px !important; margin-top: -10px !important; width: auto; display: block; }
+
+/* EFEITO PREMIUM: A LOGO DIMINUI AO ROLAR A PÁGINA */
+.main-logo { 
+  height: 190px !important; 
+  margin-top: -10px !important; 
+  width: auto; 
+  display: block; 
+  transition: height 0.4s ease, margin-top 0.4s ease; /* Animação suave */
+}
+
+.nav-active .main-logo { 
+  height: 70px !important; /* Tamanho reduzido para não engordar a barra */
+  margin-top: 0 !important; 
+}
+
 .nav-menu { display: flex; list-style: none; align-items: center; gap: 30px; margin: 0 auto; }
 .nav-menu li a { text-decoration: none; color: var(--text-white); font-weight: 600; font-size: 0.8rem; letter-spacing: 2px; transition: 0.3s; }
 .nav-menu li a:hover { color: var(--primary); }
@@ -275,7 +306,7 @@ textarea.form-control { resize: vertical; min-height: 160px; }
 .gsds-value-header h4 { font-size: 1.3rem; font-weight: 800; color: #111; text-transform: uppercase; }
 
 /* =========================================================
-   RESPONSIVIDADE
+   RESPONSIVIDADE E AJUSTES
 ========================================================= */
 @media (max-width: 1280px) {
   .container { padding: 0 40px; } 
@@ -308,9 +339,13 @@ textarea.form-control { resize: vertical; min-height: 160px; }
 @media (max-width: 768px) {
   .container { padding: 0 20px; } 
   .navbar { justify-content: space-between; padding: 12px 0; background: #000; z-index: 1001; }
+  .navbar.nav-active { padding: 8px 0; background: rgba(0,0,0,0.98); }
   .nav-content { justify-content: space-between; align-items: center; }
   .menu-toggle { display: block; position: static; padding: 10px; font-size: 1.5rem; }
   
+  .main-logo { height: 110px !important; margin-top: 0 !important; } /* Ajuste mobile */
+  .nav-active .main-logo { height: 60px !important; margin-top: 0 !important; }
+
   .nav-menu {
     position: fixed; top: -120%; left: 0; width: 100%; 
     height: auto; max-height: 85vh; padding: 90px 20px 40px 20px; 
