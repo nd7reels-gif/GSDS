@@ -4,12 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nossas Marcas - GSDS</title>
-
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="page-artistas"> <div id="preloader">
+<body class="page-artistas"> 
+
+  <div id="preloader">
     <div class="loader-content">
       <h2 style="color: #fff; letter-spacing: 5px;">GSDS</h2>
       <div class="loader-bar"></div>
@@ -17,36 +18,43 @@
   </div>
 
   <nav class="navbar nav-active" id="mainNav">
-    <div class="nav-content">
+    <div class="container nav-content">
+      <a class="nav-brand" href="index.html">
+        <h2 class="main-logo" style="display:flex; align-items:center;">GSDS</h2>
+      </a>
+
       <button class="menu-toggle" aria-label="Abrir menu" type="button" onclick="toggleMenu()">
         <i class="fas fa-bars"></i>
       </button>
 
-      <a class="nav-logo-mobile" href="index.html" aria-label="Ir para Home" style="color: #fff; font-weight: 900; text-decoration: none; font-size: 1.5rem;">
-        GSDS
-      </a>
-
       <ul class="nav-menu" id="navMenu">
-        <li><a href="index.html" onclick="closeMenu()">INÍCIO</a></li>
-        <li><a href="institucional.html" onclick="closeMenu()">SOBRE A EMPRESA</a></li>
-        <li><a href="marcas.html" onclick="closeMenu()" style="color: var(--primary);">NOSSAS MARCAS</a></li>
+        <div class="lang-switcher mobile-only" style="margin-bottom: 20px;">
+          <button class="lang-btn active" data-lang="pt" onclick="setLanguage('pt')">PT</button><span class="lang-divider">|</span>
+          <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button><span class="lang-divider">|</span>
+          <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+        </div>
 
-        <li class="nav-logo-item">
-          <h2 style="color: #fff; margin: 0 20px; font-weight: 900; letter-spacing: 2px;">GSDS</h2>
-        </li>
-
-        <li><a href="index.html#diferenciais" onclick="closeMenu()">DIFERENCIAIS</a></li>
-        <li><a href="index.html#grupo" onclick="closeMenu()">ATUAÇÃO</a></li>
-        <li><a href="index.html#contato" onclick="closeMenu()">CONTATO</a></li>
+        <li><a href="index.html" onclick="closeMenu()" data-i18n="nav_home">INÍCIO</a></li>
+        <li><a href="institucional.html" onclick="closeMenu()" data-i18n="nav_about">SOBRE A EMPRESA</a></li>
+        <li><a href="marcas.html" onclick="closeMenu()" style="color: var(--primary);" data-i18n="nav_brands">NOSSAS MARCAS</a></li>
+        <li><a href="index.html#diferenciais" onclick="closeMenu()" data-i18n="nav_diff">DIFERENCIAIS</a></li>
+        <li><a href="index.html#grupo" onclick="closeMenu()" data-i18n="nav_compliance">COMPLIANCE</a></li>
+        <li><a href="index.html#contato" onclick="closeMenu()" data-i18n="nav_contact">CONTATO</a></li>
       </ul>
+
+      <div class="lang-switcher hide-mobile">
+        <button class="lang-btn active" data-lang="pt" onclick="setLanguage('pt')">PT</button><span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button><span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+      </div>
     </div>
   </nav>
 
   <header class="artists-hero">
     <div class="container artists-hero-content">
-      <span class="corporate-badge"><i class="fas fa-box-open"></i> PORTFÓLIO EXCLUSIVO</span>
-      <h1 class="corporate-title">AS NOSSAS <span class="text-highlight">MARCAS PRÓPRIAS</span></h1>
-      <p class="corporate-subtitle">
+      <span class="corporate-badge"><i class="fas fa-box-open"></i> <span data-i18n="brands_badge">PORTFÓLIO EXCLUSIVO</span></span>
+      <h1 class="corporate-title" data-i18n="brands_title">AS NOSSAS <span class="text-highlight">MARCAS PRÓPRIAS</span></h1>
+      <p class="corporate-subtitle" data-i18n="brands_subtitle">
         Desenvolvemos marcas que fortalecem a nossa identidade no mercado, promovendo produtos que refletem valor, confiança e autenticidade.
       </p>
     </div>
@@ -135,9 +143,8 @@
       </div>
 
       <div style="text-align: center; margin-top: 60px;">
-        <a href="index.html#fale-conosco" class="btn-corporate-solid">SOLICITAR CATÁLOGO DE PRODUTOS</a>
+        <a href="index.html#fale-conosco" class="btn-corporate-solid" data-i18n="btn_portfolio">SOLICITAR CATÁLOGO DE PRODUTOS</a>
       </div>
-
     </div>
   </section>
 
@@ -183,8 +190,59 @@
   </div>
 
   <footer class="footer-section" id="contato">
-     </footer>
+    <div class="container">
+      <div class="footer-cta-box">
+        <h2 data-i18n="footer_cta_title">FORTALEÇA SUA CADEIA DE ABASTECIMENTO</h2>
+        <p data-i18n="footer_cta_desc">Soluções em importação, exportação e distribuição global de alimentos e bebidas.</p>
+        <a href="mailto:contato@gsds.pt" class="btn-footer-red" data-i18n="btn_specialist">FALAR COM UM ESPECIALISTA</a>
+      </div>
 
+      <div class="footer-main-grid">
+        <div class="footer-col brand-col">
+          <h2 style="color: #fff; margin-bottom: 20px; font-weight: 900; letter-spacing: 2px;">GSDS</h2>
+          <p>GSDS – Importação, Exportação e Distribuição de Alimentos e Bebidas, Unipessoal Lda. NIF: 518 626 075.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col links-col">
+          <h4 data-i18n="nav_title">NAVEGAÇÃO</h4>
+          <ul>
+            <li><a href="index.html#inicio" data-i18n="nav_home">Início</a></li>
+            <li><a href="institucional.html" data-i18n="nav_about">Sobre a Empresa</a></li>
+            <li><a href="marcas.html" data-i18n="nav_brands">Portfólio de Marcas</a></li>
+            <li><a href="index.html#fale-conosco" data-i18n="nav_contact">Fale Conosco</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col contact-col">
+          <h4 data-i18n="hq_title">SEDE OPERACIONAL</h4>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>contato@gsds.pt</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Rua 11 de Maio, nº 14, r/c<br>2670-458 Loures, Lisboa, Portugal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container fb-flex">
+        <p data-i18n="rights">© 2026 GSDS UNIPESSOAL LDA. TODOS OS DIREITOS RESERVADOS.</p>
+        <div class="legal-links">
+          <a href="#">POLÍTICA DE PRIVACIDADE</a>
+          <a href="#">TERMOS DE USO</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
